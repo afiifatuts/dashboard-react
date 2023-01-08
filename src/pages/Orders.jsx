@@ -6,8 +6,10 @@ import {Header} from "../components"
 
 function Orders() {
   return (
-    <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl'>
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+       <div className='w-full'>
       <Header category="Page" title="Orders"/>
+     
       <GridComponent 
         id='gridcomp'
         dataSource={ordersData}
@@ -21,6 +23,7 @@ function Orders() {
         </ColumnsDirective>
         <Inject services={[Resize,Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport ]}/>
       </GridComponent>
+      </div>
     </div>
   )
 }
